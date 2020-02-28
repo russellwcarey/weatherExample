@@ -1,3 +1,5 @@
 nightwatch.props.js
 tests_output/
 *.log
+node_modules
+package-lock.json
