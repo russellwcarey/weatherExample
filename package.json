@@ -1,0 +1,26 @@
+{
+  "name": "weatherExample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "nightwatch.conf.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "nightwatch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DevMountain-QA/weatherExample.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DevMountain-QA/weatherExample/issues"
+  },
+  "homepage": "https://github.com/DevMountain-QA/weatherExample#readme",
+  "devDependencies": {
+    "nightwatch": "^1.3.7"
+  }
+}
