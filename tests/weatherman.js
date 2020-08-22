@@ -8,6 +8,21 @@ var searches = [
     { valid: false, input: '2' },
     { valid: false, input: '!!@#$%^&*()(*&^%$#@' },
 ]
+
+var myArray = [
+    { input: '95820', result: 'Sacramento' },
+    { input: 'Provo', result: 'Provo' }
+]
+
+let myFunction = function (browser, data) {
+    browser
+        .setValue('.enter-location__input', data.input)
+        .click('.enter-location__submit')
+        .expect.element('.current-weather__location').text.to.contain(data.result)
+    browser
+        .click('.current-weather__search-again')
+}
+
 var weatherPage = {}
 module.exports = {
     beforeEach: browser => {
@@ -23,6 +38,11 @@ module.exports = {
                 weatherPage.searchWeather(search.input, search.result).searchAgain()
             else
                 weatherPage.checkError(search.input).tryAgain()
+        })
+    },
+    'Test2': browser => {
+        myArray.forEach(test => {
+            myFunction(browser, test)
         })
     }
 }
